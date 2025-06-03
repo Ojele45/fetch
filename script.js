@@ -21,12 +21,23 @@
 // call();
 // console.log("sixth task");
 
+// javascript promises
+// const promise = new Promise((resolve, reject) => {
+//     const success = true; // Simulate success or failure
+//     if (success) {
+//         resolve("Operation was successful!");
+//     } else {
+//         reject("Operation failed.");
+//     }
+
 // fetch returns a promise
 
 const fetchData = () => {
-    const check = fetch("https://jsonplaceholder.typicode.com/posts", { method: "GET",})
+    const check = fetch("https://jsonplaceholder.typicode.com/photos")
     .then(res => res.json())
     .then(data => console.log(data))
+    .catch(err => console.error("Error fetching data:", err));
 }
 fetchData();
- 
+
+//Ecma script 6
